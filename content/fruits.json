@@ -1,0 +1,107 @@
+[
+  {
+    "source": "la pomme",
+    "target": "la manzana",
+    "definition": "la manzana est une pomme",
+    "example": "La manzana está en la mesa",
+    "accepted_answers": ["la manzana", "manzana"]
+  },
+  {
+    "source": "la poire",
+    "target": "la pera",
+    "definition": "la pera est une poire",
+    "example": "La pera está en la mesa",
+    "accepted_answers": ["la pera", "pera"]
+  },
+  {
+    "source": "la banane",
+    "target": "la banana",
+    "definition": "la banana est une banane",
+    "example": "La banana está en la mesa",
+    "accepted_answers": ["la banana", "banana"]
+  },
+  {
+    "source": "l’orange",
+    "target": "la naranja",
+    "definition": "la naranja est une orange",
+    "example": "La naranja está en la mesa",
+    "accepted_answers": ["la naranja", "naranja"]
+  },
+  {
+    "source": "la mandarine",
+    "target": "la mandarina",
+    "definition": "la mandarina est une mandarine",
+    "example": "La mandarina está en la mesa",
+    "accepted_answers": ["la mandarina", "mandarina"]
+  },
+  {
+    "source": "le citron",
+    "target": "el limón",
+    "definition": "el limón est un citron",
+    "example": "El limón está en la mesa",
+    "accepted_answers": ["el limón", "limón"]
+  },
+  {
+    "source": "la pêche",
+    "target": "la el melocotón",
+    "definition": "el melocotón est une pêche",
+    "example": "el melocotón está en la mesa",
+    "accepted_answers": ["el melocotón", "melocotón"]
+  },
+  {
+    "source": "la nectarine",
+    "target": "la nectarina",
+    "definition": "la nectarina est une nectarine",
+    "example": "La nectarina está en la mesa",
+    "accepted_answers": ["la nectarina", "nectarina"]
+  },
+  {
+    "source": "la fraise",
+    "target": "la fresa",
+    "definition": "la fresa est une fraise",
+    "example": "La fresa está en la mesa",
+    "accepted_answers": ["la fresa", "fresa"]
+  },
+  {
+    "source": "la cerise",
+    "target": "la cereza",
+    "definition": "la cereza est une cerise",
+    "example": "La cereza está en la mesa",
+    "accepted_answers": ["la cereza", "cereza"]
+  },
+  {
+    "source": "le melon",
+    "target": "el melón",
+    "definition": "el melón est un melon",
+    "example": "El melón está en la mesa",
+    "accepted_answers": ["el melón", "melón"]
+  },
+  {
+    "source": "la pastèque",
+    "target": "la sandía",
+    "definition": "la sandía est une pastèque",
+    "example": "La sandía está en la mesa",
+    "accepted_answers": ["la sandía", "sandía"]
+  },
+  {
+    "source": "l’abricot",
+    "target": "el albaricoque",
+    "definition": "el albaricoque est un abricot",
+    "example": "El albaricoque está en la mesa",
+    "accepted_answers": ["el albaricoque", "albaricoque"]
+  },
+  {
+    "source": "le raisin",
+    "target": "la uva",
+    "definition": "la uva est un raisin",
+    "example": "La uva está en la mesa",
+    "accepted_answers": ["la uva", "uva"]
+  },
+  {
+	"source": "la figue",
+    "target": "el higo",
+    "definition": "el higo est une figue",
+    "example": "el higo está en la mesa",
+    "accepted_answers": ["el higo", "higo"]
+  }
+]

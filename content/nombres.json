@@ -1,0 +1,7 @@
+[
+  { "source": "un", "target": "uno" },
+  { "source": "deux", "target": "dos" },
+  { "source": "trois", "target": "tres" },
+  { "source": "quatre", "target": "cuatro" },
+  { "source": "cinq", "target": "cinco" }
+]
