@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import json
+import os
 
 app = Flask(__name__)
 
@@ -29,4 +30,4 @@ def home():
     return render_template("index.html", mot=mot, message=message)
 
 if __name__ == "__main__":
-   app.run(debug=False, use_reloader=False)
+   app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=False, use_reloader=False)
