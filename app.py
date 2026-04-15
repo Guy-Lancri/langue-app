@@ -15,15 +15,25 @@ def home():
     message = ""
 
     if request.method == "POST":
-        reponse = request.form["reponse"]
-        traduction = fruits[index]["source"]
-        mot = fruits[index]["target"]
+        action = request.form.get("action")
 
-        if traduction.lower() in reponse.lower():
-            message = "bien"
-            index = (index + 1) % len(fruits)
+        if action == "retour":
+            index = (index - 1) % len(fruits)
+            message = ""
+
+        elif action == "stop":
+            message = "Session arrêtée"
+
         else:
-            message = f"No. {mot} = {traduction}"
+            reponse = request.form.get("reponse", "")
+            traduction = fruits[index]["source"]
+            mot = fruits[index]["target"]
+
+            if traduction.lower() in reponse.lower():
+                message = "bien"
+                index = (index + 1) % len(fruits)
+            else:
+                message = f"No. {mot} = {traduction}"
 
     mot = fruits[index]["target"]
     return render_template("index.html", mot=mot, message=message)
