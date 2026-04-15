@@ -7,6 +7,8 @@ app = Flask(__name__)
 with open("content/fruits.json", "r", encoding="utf-8") as f:
     fruits = json.load(f)
 
+prenom = user["prenom"]
+
 index = 0
 
 @app.route("/", methods=["GET", "POST"])
