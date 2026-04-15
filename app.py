@@ -4,7 +4,6 @@ import os
 
 app = Flask(__name__)
 
-# Charger les fruits
 with open("content/fruits.json", "r", encoding="utf-8") as f:
     fruits = json.load(f)
 
@@ -13,13 +12,12 @@ index = 0
 @app.route("/", methods=["GET", "POST"])
 def home():
     global index
-
-    mot = fruits[index]["target"]
-    traduction = fruits[index]["source"]
     message = ""
 
     if request.method == "POST":
         reponse = request.form["reponse"]
+        traduction = fruits[index]["source"]
+        mot = fruits[index]["target"]
 
         if traduction.lower() in reponse.lower():
             message = "bien"
@@ -27,7 +25,8 @@ def home():
         else:
             message = f"No. {mot} = {traduction}"
 
+    mot = fruits[index]["target"]
     return render_template("index.html", mot=mot, message=message)
 
 if __name__ == "__main__":
-   app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=False, use_reloader=False)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=False, use_reloader=False)
