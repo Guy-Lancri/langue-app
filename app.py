@@ -7,6 +7,9 @@ app = Flask(__name__)
 with open("content/fruits.json", "r", encoding="utf-8") as f:
     fruits = json.load(f)
 
+with open("users/U0001.json", "r", encoding="utf-8") as f:
+    user = json.load(f)
+
 prenom = user["prenom"]
 
 index = 0
@@ -14,7 +17,11 @@ index = 0
 @app.route("/", methods=["GET", "POST"])
 def home():
     global index
-    message = ""
+
+    if index == 0:
+        message = f"Bonjour {prenom}, vous allez procéder à l’exercice {index + 1}"
+    else:
+        message = ""
 
     if request.method == "POST":
         action = request.form.get("action")
@@ -32,8 +39,11 @@ def home():
             mot = fruits[index]["target"]
 
             if traduction.lower() in reponse.lower():
-                message = "bien"
                 index = (index + 1) % len(fruits)
+                if index == 0:
+                    message = f"Bonjour {prenom}, vous allez procéder à l’exercice {index + 1}"
+                else:
+                    message = "bien"
             else:
                 message = f"No. {mot} = {traduction}"
 
